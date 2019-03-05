@@ -84,6 +84,9 @@ $ mkdir openMVG_Build && cd openMVG_Build
 $ cmake -DCMAKE_BUILD_TYPE=RELEASE ../openMVG/src/
 $ cmake --build . --target install
 ```
+--->here I have some problem `../../Linux-x86_64-RELEASE/libopenMVG_cxsparse.a(cs_amd.c.o): relocation R_X86_64_32 against ‘.text’ can not be used when making a PIE object; recompile with -fPI`
+---> just turn the `OpenMVG_BUILD_SHARED` ON
+and you need build under `sudo`, so here I used ` sudo cmake --build . --target install`
 
 Run tests using make or ctest (if requested in the CMake command line with `-DOpenMVG_BUILD_TESTS=ON`)
 ```shell
